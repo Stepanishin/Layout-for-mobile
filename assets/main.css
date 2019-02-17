@@ -1,0 +1,483 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Dinpro-bold";
+  src: url("fonts/dinpro-bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "dinpro-medium";
+  src: url("fonts/dinpro-medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "dinpro-regular";
+  src: url("fonts/dinpro-regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  font-size: 2vw;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+nav {
+  display: flex;
+}
+
+.header__nav_openMenu {
+  margin: 28px 0px 30px 0px;
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.header__nav_openMenu::before,
+.header__nav_openMenu::after {
+  display: block;
+  height: 2px;
+  background-color: #000000;
+  content: "";
+}
+
+.header__nav_openMenu::before {
+  transform: translate(0, -7px);
+  width: 24px;
+}
+
+.header__nav_openMenu::after {
+  transform: translate(0, 7px);
+  width: 19px;
+}
+
+.header__nav_title {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Dinpro-bold", sans-serif;
+  margin: auto;
+  position: relative;
+  color: #5697c3;
+}
+
+.header__nav_title:before {
+  content: "";
+  background-image: url("img/bitmap.png");
+  display: block;
+  width: 23px;
+  height: 24px;
+  background-size: cover;
+  position: absolute;
+  left: -26px;
+  top: -5px;
+}
+
+.header__nav_title:after {
+  content: "0";
+  position: absolute;
+  width: 34px;
+  height: 25px;
+  border-radius: 17.5px;
+  background-image: linear-gradient(to right, #e59219, #f5d854);
+  right: -36px;
+  top: -5px;
+  text-align: center;
+  line-height: 2;
+  font-size: 12px;
+  color: #000000;
+}
+
+/* Верстаю секцию с репостом */
+.reposte {
+  height: 185px;
+  background-color: #eaeef1;
+  padding-top: 25px;
+}
+
+.container__reposte {
+  border-radius: 12px;
+  box-shadow: 0 11px 14px 0 rgba(0, 0, 0, 0.07);
+  border: 2px solid #5698c4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.reposte_description {
+  display: block;
+  display: flex;
+  margin: 15px 27px 33px 30px;
+  width: 76.1%;
+  height: 57.9%;
+  font-family: "dinpro-regular";
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.47;
+}
+
+.container__reposte:before {
+  content: "+150";
+  font-family: "Dinpro-bold";
+  position: absolute;
+  width: 39px;
+  height: 25px;
+  border-radius: 17.5px;
+  background-image: linear-gradient(to right, #e59219, #f5d854);
+  font-size: 12px;
+  font-weight: bold;
+  top: -15px;
+  left: 45%;
+  text-align: center;
+  line-height: 2;
+}
+
+.container__reposte:after {
+  content: "Поделиться!";
+  position: absolute;
+  font-family: "dinpro-medium";
+  font-size: 16px;
+  text-align: center;
+  line-height: 2.5;
+  width: 170px;
+  height: 44px;
+  border-radius: 22.5px;
+  border: 2px solid #5698c4;
+  background-color: #ffffff;
+  z-index: 1;
+  top: 80%;
+  color: #5697c3;
+}
+
+/* верстаю секцию с adidas */
+.container_offerFromAdidas {
+  margin-top: 20px;
+  border-radius: 3px;
+  background-color: #f6e4e2;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.container_offerFromAdidas::after {
+  background-image: url("img/img-test.png");
+  width: 140px;
+  height: 118px;
+  content: "";
+  display: block;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.container_offerFromAdidas::before {
+  content: "+150";
+  font-family: "Dinpro-bold";
+  position: absolute;
+  width: 39px;
+  height: 25px;
+  border-radius: 17.5px;
+  background-image: linear-gradient(to right, #e59219, #f5d854);
+  font-size: 12px;
+  font-weight: bold;
+  bottom: 15px;
+  right: 6%;
+  text-align: center;
+  line-height: 2;
+  z-index: 2;
+}
+
+.offerFromAdidas_title {
+  font-family: "dinpro-medium";
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 10px;
+  padding-right: 35%;
+  padding-top: 15px;
+  font-weight: 500;
+}
+
+.offerFromAdidas_address {
+  font-family: "dinpro-regular";
+  font-size: 12px;
+  text-align: left;
+  margin-left: 36px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.offerFromAdidas_address::before {
+  content: "";
+  background-image: url("img/ic-location.svg");
+  width: 16px;
+  height: 16px;
+  content: "";
+  display: block;
+  background-size: cover;
+  position: absolute;
+  left: -16px;
+  top: 9px;
+}
+
+.offerFromAdidas_data {
+  font-family: "dinpro-regular";
+  font-size: 12px;
+  text-align: left;
+  margin-left: 36px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.offerFromAdidas_data::before {
+  content: "";
+  background-image: url("img/ic-time.svg");
+  width: 16px;
+  height: 16px;
+  content: "";
+  display: block;
+  background-size: cover;
+  position: absolute;
+  left: -16px;
+  top: 9px;
+}
+
+/* верстаю блок с категориями */
+.categories_title {
+  font-family: "dinpro-medium";
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: 500;
+  text-align: left;
+  margin: 25px 20px;
+}
+
+.container__categories_form {
+  height: 48px;
+  border-radius: 100px;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.container__categories_first {
+  background-image: linear-gradient(to left, #f6a997, #cb5433);
+}
+
+.container__categories_second {
+  background-image: linear-gradient(to left, #f5d854, #e97800);
+}
+
+.container__categories_third {
+  background-image: linear-gradient(to right, #6ba860, #80c5a1);
+}
+
+.container__categories_fourth {
+  background-image: linear-gradient(to right, #5698c4, #aad2bf);
+}
+
+.container__categories_fifth {
+  background-image: linear-gradient(to right, #475c6e, #b6d1e8);
+}
+
+.container__categories_form::after {
+  content: "";
+  background-image: url("img/ic-arrow.svg");
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: cover;
+  position: absolute;
+  right: 5%;
+  top: 15px;
+}
+
+.container__categories_title {
+  font-family: "dinpro-medium";
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 3;
+  padding-left: 20px;
+}
+
+/* Здесь верстаем призы за баллы */
+.stock {
+  margin-top: 25px;
+}
+
+.stock_title {
+  font-family: "Dinpro-bold";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.container__stock {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 10px;
+}
+
+.container__stock_choose {
+  font-family: "dinpro-medium";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.57;
+  text-align: center;
+  letter-spacing: 0.7px;
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+}
+
+.container__stock_choose::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #5697c3;
+  width: 0%;
+  bottom: -13px;
+  left: 0;
+}
+
+.container__stock_choose:hover::after {
+  width: 100%;
+}
+
+.container__stock_choose:hover {
+  color: #5698c4;
+}
+
+.container__content_first,
+.container__content_second {
+  padding-left: 30%;
+  padding-top: 10px;
+  position: relative;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+
+.container__content_item {
+  font-family: "dinpro-regular";
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+}
+
+.container__content_name {
+  font-family: "dinpro-medium";
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  font-weight: bold;
+}
+
+.container__content_link {
+  font-family: "Dinpro-bold";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
+  color: #5698c4;
+}
+
+.container__content_first::after,
+.container__content_second::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 28px;
+  left: 0;
+}
+
+.container__content_first::after {
+  background-image: url("img/lady-collection.svg");
+}
+
+.container__content_second::after {
+  background-image: url("img/street-beat.svg");
+}
+
+.container__content_first::before,
+.container__content_second::before {
+  content: "100";
+  width: 40px;
+  height: 25px;
+  border-radius: 17.5px;
+  background-image: linear-gradient(to right, #e59219, #f5d854);
+  position: absolute;
+  font-family: "Dinpro-bold";
+  font-size: 12px;
+  font-weight: bold;
+  top: 22%;
+  right: 0;
+  text-align: center;
+  line-height: 2;
+}
+
+/* Здесь верстаем подвал сайта */
+.footer_title {
+  font-family: "dinpro-medium";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.container__footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.footer__info {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.footer__info_rules {
+  display: block;
+  font-family: "dinpro-medium";
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  line-height: 2;
+}
+
+.footer_redaction {
+  font-family: "dinpro-medium";
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */
